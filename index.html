@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarem Textiles - Casa de Confección</title>
+    
+    <!-- Google Fonts for Lancelot and Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Lancelot&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: "#132a4d", // The requested exact hex
+                            dark: "#0a1830",
+                            accent: "#e2e8f0"
+                        },
+                    },
+                    fontFamily: {
+                        title: ['"Lancelot"', "serif"],
+                        caption: ['"Sukar"', "sans-serif", "Arial"], // Added standard fallbacks
+                        body: ['"Be Vietnam Pro"', "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Font Face for Sukar (Assuming it's not on Google Fonts) */
+        @font-face {
+            font-family: 'Sukar';
+            src: local('Sukar'), local('Arial'); /* Fallback applied if local font not installed */
+        }
+
+        body {
+            background-color: #132a4d;
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Abstract Topographic Lines Pattern */
+        .bg-topographic {
+            position: relative;
+        }
+        .bg-topographic::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='1.5'%3E%3Cpath d='M769 229L1037 260M-92 140L415 158M-12 305L452 355M420 1428L781 1045M-167 763L99 631M445 1198L1246 886M-37 1147L308 1024M167 1515L614 1171M-115 470L407 532M-156 942L358 870M-27 1319L491 1204M-188 599L403 723M-137 1399L465 1412M-211 412L397 387M-186 270L428 221M-201 190L407 98M-138 78L404 15M-153 1032L431 1098M-147 1221L479 1302M-174 863L405 929M-125 693L445 798'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Utility to ensure text sits above the pattern */
+        .content-over-pattern {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Slider Transitions */
+        .slide {
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .slide.active {
+            opacity: 1;
+            z-index: 5;
+        }
+
+        /* Custom Scrollbar for elegance */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #132a4d; }
+        ::-webkit-scrollbar-thumb { background: #334a6d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4a6285; }
+    </style>
+</head>
+<body class="font-body text-white antialiased">
+
+    <!-- Navigation (Absolute to overlay the slider) -->
+    <nav class="absolute top-0 w-full z-50 px-8 py-6 flex justify-between items-center border-b border-white/10 bg-brand/30 backdrop-blur-sm">
+        <div class="font-title text-3xl tracking-wider text-white">Zarem</div>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-10 text-sm font-caption tracking-widest uppercase">
+            <li><a href="#" class="hover:text-gray-300 transition-colors">Inicio</a></li>
+            <li><a href="#marcas" class="hover:text-gray-300 transition-colors">Colegios y Marcas</a></li>
+            <li><a href="#manufactura" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
+            <li><a href="#contacto" class="hover:text-gray-300 transition-colors">Contacto</a></li>
+        </ul>
+
+        <!-- Cart Icon -->
+        <a href="#" class="relative group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white group-hover:text-gray-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-white text-brand text-xs rounded-full h-4 w-4 flex items-center justify-center font-bold">0</span>
+        </a>
+    </nav>
+
+    <!-- CONTAINER 1: Hero Slider -->
+    <section class="relative w-full h-screen overflow-hidden bg-brand">
+        
+        <!-- Slider Container -->
+        <div id="hero-slider" class="w-full h-full relative">
+            
+            <!-- Slide 1 (Based exactly on "Screenshot 2026-07-25 103430.jpg") -->
+            <div class="slide active flex flex-col md:flex-row w-full h-full">
+                <!-- Left: Text & Pattern -->
+                <div class="w-full md:w-1/2 h-full bg-brand bg-topographic flex flex-col justify-center items-center text-center p-8 md:p-16">
+                    <div class="content-over-pattern max-w-lg w-full flex flex-col items-center">
+                        <p class="font-caption uppercase tracking-[0.2em] text-sm mb-12 text-gray-300">Casa de Confeccion</p>
+                        
+                        <div class="font-title text-6xl md:text-8xl leading-none mb-12 flex flex-col items-center w-full">
+                            <span class="block ml-[-20%]">Zarem</span>
+                            <span class="block ml-[20%] mt-2">Textiles</span>
+                        </div>
+                        
+                        <p class="font-body font-light text-lg text-gray-200 mt-8">Diseños exclusivos<br>con calidad garantizada</p>
+                    </div>
+                </div>
+                <!-- Right: Image -->
+                <div class="w-full md:w-1/2 h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1605382583563-3d0277259166?q=80&w=1400&auto=format&fit=crop'); box-shadow: inset 15px 0 30px -15px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide flex flex-col md:flex-row w-full h-full">
+                <div class="w-full md:w-1/2 h-full bg-brand bg-topographic flex flex-col justify-center items-center text-center p-8 md:p-16">
+                    <div class="content-over-pattern max-w-lg">
+                        <p class="font-caption uppercase tracking-[0.2em] text-sm mb-8 text-gray-300">Tradición y Prestigio</p>
+                        <h2 class="font-title text-5xl md:text-7xl mb-6 leading-tight">Uniformes<br>Escolares</h2>
+                        <p class="font-body font-light text-lg text-gray-200 mt-6">Vistiendo a las futuras generaciones con durabilidad y estilo.</p>
+                        <button class="mt-10 px-8 py-3 border border-white hover:bg-white hover:text-brand transition-colors font-caption uppercase tracking-wider text-sm">Ver Colegios</button>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1596423735880-5f2a689b903e?q=80&w=1400&auto=format&fit=crop'); box-shadow: inset 15px 0 30px -15px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex space-x-4">
+            <button onclick="changeSlide(0)" class="w-3 h-3 rounded-full bg-white opacity-100 transition-opacity slider-dot"></button>
+            <button onclick="changeSlide(1)" class="w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity slider-dot"></button>
+        </div>
+    </section>
+
+    <!-- CONTAINER 2: Colegios y Marcas (Bubble Icons) -->
+    <section id="marcas" class="w-full py-24 px-8 bg-brand-dark bg-topographic relative border-t border-white/5">
+        <div class="content-over-pattern max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="font-caption uppercase tracking-[0.15em] text-sm text-gray-400 mb-3">Nuestras Alianzas</p>
+                <h2 class="font-title text-4xl md:text-5xl text-white">Colegios y Marcas</h2>
+                <div class="w-24 h-px bg-white/30 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Bubble Icons Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 justify-items-center">
+                
+                <!-- Bubble 1 -->
+                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
+                        <!-- Placeholder for Logo -->
+                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Colegio+A&font=playfair-display" alt="Colegio 1" class="w-full h-full object-contain rounded-full">
+                        <!-- Overlay overlay -->
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Instituto San José</h3>
+                    <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Uniformes</p>
+                </a>
+
+                <!-- Bubble 2 -->
+                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
+                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Colegio+B&font=playfair-display" alt="Colegio 2" class="w-full h-full object-contain rounded-full">
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Liceo Americano</h3>
+                    <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Uniformes</p>
+                </a>
+
+                <!-- Bubble 3 -->
+                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
+                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Marca+X&font=playfair-display" alt="Marca 1" class="w-full h-full object-contain rounded-full">
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Corporativo Alfa</h3>
+                    <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Catálogo</p>
+                </a>
+
+                <!-- Bubble 4 -->
+                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
+                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Marca+Y&font=playfair-display" alt="Marca 2" class="w-full h-full object-contain rounded-full">
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Boutique Zarem</h3>
+                    <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Colección Exclusiva</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTAINER 3: Manufactura -->
+    <section id="manufactura" class="w-full py-24 px-8 bg-brand relative overflow-hidden border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            
+            <!-- Image Side -->
+            <div class="w-full lg:w-1/2 relative group">
+                <div class="absolute -inset-2 border border-white/20 transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop" alt="Proceso de Manufactura" class="w-full h-auto object-cover relative z-10 shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+            </div>
+
+            <!-- Text Side -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                <p class="font-caption uppercase tracking-[0.2em] text-sm text-gray-400 mb-4">El Arte del Detalle</p>
+                <h2 class="font-title text-4xl md:text-5xl text-white mb-8">Manufactura de Alta Precisión</h2>
+                <div class="font-body font-light text-gray-300 space-y-6 leading-relaxed">
+                    <p>En Zarem Textiles, cada hilo cuenta una historia de dedicación y excelencia. Nuestro proceso de manufactura combina la tradición artesanal con la tecnología textil más avanzada.</p>
+                    <p>Seleccionamos meticulosamente nuestras materias primas para garantizar que cada uniforme escolar y prenda corporativa cumpla con nuestros rigurosos estándares de durabilidad y comodidad, asegurando la satisfacción total en cada puntada.</p>
+                </div>
+                <div class="mt-10">
+                    <a href="manufactura.html" class="inline-block px-10 py-4 bg-white text-brand font-caption uppercase tracking-wider text-sm font-bold hover:bg-gray-200 transition-colors shadow-lg">Conoce el Proceso</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTAINER 4: Footer & Contacto -->
+    <footer id="contacto" class="w-full bg-[#071324] pt-20 pb-10 px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-16">
+            
+            <!-- Brand Info -->
+            <div>
+                <h3 class="font-title text-3xl mb-6">Zarem Textiles</h3>
+                <p class="font-body text-gray-400 text-sm leading-relaxed mb-6">
+                    Diseños exclusivos con calidad garantizada. Casa de confección líder en uniformes y alta costura.
+                </p>
+                <div class="flex space-x-4">
+                    <!-- Social Icons (Placeholders using SVG) -->
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-col md:items-center">
+                <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Enlaces Rápidos</h4>
+                <ul class="space-y-3 font-body text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="colegio.html" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
+                    <li><a href="manufactura.html" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
+                    <li><a href="contacto.html" class="hover:text-white transition-colors">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Contacto</h4>
+                <ul class="space-y-4 font-body text-sm text-gray-400">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-3 text-white/50 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Av. Textil Principal 123<br>Ciudad, País 45678</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:info@zaremtextiles.com" class="hover:text-white transition-colors">info@zaremtextiles.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>+52 55 1234 5678</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-8 font-body text-xs text-gray-500">
+            &copy; 2026 Zarem Textiles. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Javascript for simple slider functionality -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        function updateSlider(index) {
+            // Remove active classes
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => {
+                dot.classList.remove('opacity-100');
+                dot.classList.add('opacity-40');
+            });
+
+            // Add active classes to current
+            slides[index].classList.add('active');
+            dots[index].classList.remove('opacity-40');
+            dots[index].classList.add('opacity-100');
+            
+            currentSlide = index;
+        }
+
+        function changeSlide(index) {
+            clearInterval(slideInterval); // Reset timer on manual click
+            updateSlider(index);
+            startSlider();
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % totalSlides;
+            updateSlider(next);
+        }
+
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
+        }
+
+        // Initialize
+        startSlider();
+    </script>
+</body>
+</html>
