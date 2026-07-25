@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Lancelot&display=swap');
+
+/* Note: Ensure Sukar font file (.woff2) is hosted in your fonts folder or imported accordingly if custom */
+@font-face {
+    font-family: 'Sukar';
+    src: url('../fonts/Sukar-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Base Setup --- */
+:root {
+    --bg-color: #132a4d;
+    --font-title: 'Lancelot', serif;
+    --font-caption: 'Sukar', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* --- Abstract Topographic Lines Pattern Overlay --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Inline SVG Data URI for Abstract Topographic Lines Pattern */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='1.5'%3E%3Cpath d='M769 229L1037 260M-92 140L415 158M-12 305L452 355M420 1428L781 1045M-167 763L99 631M445 1198L1246 886M-37 1147L308 1024M167 1515L614 1171M-115 470L407 532M-156 942L358 870M-27 1319L491 1204M-188 599L403 723M-137 1399L465 1412M-211 412L397 387M-186 270L428 221M-201 190L407 98M-138 78L404 15M-153 1032L431 1098M-147 1221L479 1302M-174 863L405 929M-125 693L445 798'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* --- Typography Rules --- */
+h1, h2, h3, .title-font {
+    font-family: var(--font-title);
+    letter-spacing: 0.05em;
+}
+
+caption, .caption-font, small, .subtitle {
+    font-family: var(--font-caption);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+p, span, a, li, button {
+    font-family: var(--font-body);
+}
+
+/* --- Utility Classes for Tailwind Compatibility --- */
+.font-title { font-family: var(--font-title); }
+.font-caption { font-family: var(--font-caption); }
+.font-body { font-family: var(--font-body); }
+.bg-brand { background-color: var(--bg-color); }
