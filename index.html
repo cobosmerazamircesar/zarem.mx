@@ -13,7 +13,6 @@
     <!-- Tailwind CSS Script -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -102,8 +101,8 @@
         <ul class="hidden md:flex space-x-10 text-sm font-caption tracking-widest uppercase">
             <li><a href="#" class="hover:text-gray-300 transition-colors">Inicio</a></li>
             <li><a href="#marcas" class="hover:text-gray-300 transition-colors">Colegios y Marcas</a></li>
-            <li><a href="#manufactura" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
-            <li><a href="#contacto" class="hover:text-gray-300 transition-colors">Contacto</a></li>
+            <li><a href="/static/manufactura" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
+            <li><a href="/static/contacto" class="hover:text-gray-300 transition-colors">Contacto</a></li>
         </ul>
 
         <!-- Cart Icon -->
@@ -148,7 +147,7 @@
                         <p class="font-caption uppercase tracking-[0.2em] text-sm mb-8 text-gray-300">Tradición y Prestigio</p>
                         <h2 class="font-title text-5xl md:text-7xl mb-6 leading-tight">Uniformes<br>Escolares</h2>
                         <p class="font-body font-light text-lg text-gray-200 mt-6">Vistiendo a las futuras generaciones con durabilidad y estilo.</p>
-                        <button class="mt-10 px-8 py-3 border border-white hover:bg-white hover:text-brand transition-colors font-caption uppercase tracking-wider text-sm">Ver Colegios</button>
+                        <a href="#marcas" class="inline-block mt-10 px-8 py-3 border border-white hover:bg-white hover:text-brand transition-colors font-caption uppercase tracking-wider text-sm">Ver Colegios</a>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 h-full bg-cover bg-center" style="background-image: url('src/wallpapers/Blue-model-1001.jpg'); box-shadow: inset 15px 0 30px -15px rgba(0,0,0,0.5);">
@@ -166,56 +165,44 @@
 
     <!-- CONTAINER 2: Colegios y Marcas (Bubble Icons) -->
     <section id="marcas" class="w-full py-24 px-8 bg-brand-dark bg-topographic relative border-t border-white/5">
-        <div class="content-over-pattern max-w-6xl mx-auto">
+        <div class="content-over-pattern max-w-5xl mx-auto">
             <div class="text-center mb-16">
                 <p class="font-caption uppercase tracking-[0.15em] text-sm text-gray-400 mb-3">Nuestras Alianzas</p>
                 <h2 class="font-title text-4xl md:text-5xl text-white">Colegios y Marcas</h2>
                 <div class="w-24 h-px bg-white/30 mx-auto mt-6"></div>
             </div>
 
-            <!-- Bubble Icons Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 justify-items-center">
+            <!-- Bubble Icons Grid (Updated to 3 items) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 justify-items-center">
                 
                 <!-- Bubble 1 -->
-                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
-                        <!-- Placeholder for Logo -->
-                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Colegio+A&font=playfair-display" alt="Colegio 1" class="w-full h-full object-contain rounded-full">
-                        <!-- Overlay overlay -->
+                <a href="#colegio1" class="group flex flex-col items-center text-center w-full max-w-[220px]">
+                    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-6">
+                        <img src="/src/stj-white.jpg" alt="Colegio 1" class="w-full h-full object-contain rounded-full">
                         <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
-                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Instituto San José</h3>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Colegio San José</h3>
                     <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Uniformes</p>
                 </a>
 
                 <!-- Bubble 2 -->
-                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
-                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Colegio+B&font=playfair-display" alt="Colegio 2" class="w-full h-full object-contain rounded-full">
+                <a href="#colegio2" class="group flex flex-col items-center text-center w-full max-w-[220px]">
+                    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-6">
+                        <img src="/src/stj-inverse.png" alt="Colegio 2" class="w-full h-full object-contain rounded-full">
                         <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
-                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Liceo Americano</h3>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Instituto Zarem</h3>
                     <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Uniformes</p>
                 </a>
 
                 <!-- Bubble 3 -->
-                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
-                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Marca+X&font=playfair-display" alt="Marca 1" class="w-full h-full object-contain rounded-full">
+                <a href="#marca1" class="group flex flex-col items-center text-center w-full max-w-[220px]">
+                    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-6">
+                        <img src="/src/logo3.png" alt="Marca 1" class="w-full h-full object-contain rounded-full">
                         <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
-                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Corporativo Alfa</h3>
+                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Línea Corporativa</h3>
                     <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Catálogo</p>
-                </a>
-
-                <!-- Bubble 4 -->
-                <a href="colegio.html" class="group flex flex-col items-center text-center w-full max-w-[180px]">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-4">
-                        <img src="https://placehold.co/200x200/ffffff/132a4d?text=Marca+Y&font=playfair-display" alt="Marca 2" class="w-full h-full object-contain rounded-full">
-                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Boutique Zarem</h3>
-                    <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Colección Exclusiva</p>
                 </a>
 
             </div>
@@ -241,7 +228,7 @@
                     <p>Seleccionamos meticulosamente nuestras materias primas para garantizar que cada uniforme escolar y prenda corporativa cumpla con nuestros rigurosos estándares de durabilidad y comodidad, asegurando la satisfacción total en cada puntada.</p>
                 </div>
                 <div class="mt-10">
-                    <a href="manufactura.html" class="inline-block px-10 py-4 bg-white text-brand font-caption uppercase tracking-wider text-sm font-bold hover:bg-gray-200 transition-colors shadow-lg">Conoce el Proceso</a>
+                    <a href="/static/manufactura" class="inline-block px-10 py-4 bg-white text-brand font-caption uppercase tracking-wider text-sm font-bold hover:bg-gray-200 transition-colors shadow-lg">Conoce el Proceso</a>
                 </div>
             </div>
 
@@ -274,9 +261,10 @@
                 <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Enlaces Rápidos</h4>
                 <ul class="space-y-3 font-body text-sm text-gray-400">
                     <li><a href="#" class="hover:text-white transition-colors">Inicio</a></li>
-                    <li><a href="colegio.html" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
-                    <li><a href="manufactura.html" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
-                    <li><a href="contacto.html" class="hover:text-white transition-colors">Contáctanos</a></li>
+                    <li><a href="#marcas" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
+                    <li><a href="/static/manufactura" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
+                    <li><a href="/static/contacto" class="hover:text-white transition-colors">Contáctanos</a></li>
+                    <li><a href="/static/aviso-de-privacidad" class="hover:text-white transition-colors">Aviso de Privacidad</a></li>
                 </ul>
             </div>
 
@@ -285,16 +273,16 @@
                 <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Contacto</h4>
                 <ul class="space-y-4 font-body text-sm text-gray-400">
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-3 text-white/50 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <span>Av. Textil Principal 123<br>Ciudad, País 45678</span>
+                        <svg class="w-5 h-5 mr-3 text-white/50 mt-0.5 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Dakota 412, Nápoles, Benito Juárez,<br>03480 Ciudad de México, CDMX</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 mr-3 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <a href="mailto:info@zaremtextiles.com" class="hover:text-white transition-colors">info@zaremtextiles.com</a>
+                        <svg class="w-5 h-5 mr-3 text-white/50 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:info@zarem.mx" class="hover:text-white transition-colors">info@zarem.mx</a>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 mr-3 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <span>+52 55 1234 5678</span>
+                        <svg class="w-5 h-5 mr-3 text-white/50 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>+52 1 55 2741 5514</span>
                     </li>
                 </ul>
             </div>
