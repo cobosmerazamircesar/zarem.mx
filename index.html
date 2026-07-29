@@ -172,14 +172,15 @@
                 <div class="w-24 h-px bg-white/30 mx-auto mt-6"></div>
             </div>
 
-            <!-- Bubble Icons Grid (Updated to 3 items) -->
+            <!-- Bubble Icons Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 justify-items-center">
                 
                 <!-- Bubble 1 -->
                 <a href="#colegio1" class="group flex flex-col items-center text-center w-full max-w-[220px]">
                     <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-6">
-                        <img src="/src/logos/stj-white.jpg" alt="Colegio 1" class="w-full h-full object-contain rounded-full">
-                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                        <!-- Fix: Removed the leading slash so the path is relative and resolves properly on GitHub pages -->
+                        <img src="src/logos/stj-white.jpg" alt="Colegio 1" class="w-full h-full object-contain rounded-full relative z-10">
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors z-20"></div>
                     </div>
                     <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Colegio STJ</h3>
                     <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Uniformes</p>
@@ -188,8 +189,9 @@
                 <!-- Bubble 2 -->
                 <a href="#colegio2" class="group flex flex-col items-center text-center w-full max-w-[220px]">
                     <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-6">
-                        <img src="/src/logos/stj-inverse.png" alt="Colegio 2" class="w-full h-full object-contain rounded-full">
-                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                        <!-- Fix: Removed the leading slash -->
+                        <img src="src/logos/stj-inverse.png" alt="Colegio 2" class="w-full h-full object-contain rounded-full relative z-10">
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors z-20"></div>
                     </div>
                     <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Instituto Zarem</h3>
                     <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Uniformes</p>
@@ -198,8 +200,9 @@
                 <!-- Bubble 3 -->
                 <a href="#marca1" class="group flex flex-col items-center text-center w-full max-w-[220px]">
                     <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 relative bg-white flex items-center justify-center p-6">
-                        <img src="/src/logos/logo3.png" alt="Marca 1" class="w-full h-full object-contain rounded-full">
-                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors"></div>
+                        <!-- Fix: Removed the leading slash -->
+                        <img src="src/logos/logo3.png" alt="Marca 1" class="w-full h-full object-contain rounded-full relative z-10">
+                        <div class="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-colors z-20"></div>
                     </div>
                     <h3 class="mt-6 font-body font-medium text-lg tracking-wide group-hover:text-gray-300 transition-colors">Línea Corporativa</h3>
                     <p class="font-caption text-xs text-gray-400 mt-2 tracking-widest uppercase">Ver Catálogo</p>
