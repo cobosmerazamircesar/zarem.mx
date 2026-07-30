@@ -1,1 +1,430 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Zarem Textiles</title>
+    <!-- Google Fonts: Lancelot & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lancelot&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: "#132a4d",
+                            dark: "#0b1b33",
+                            light: "#1e3d6b",
+                            accent: "#d4af37",
+                            gold: "#f3e5ab"
+                        },
+                    },
+                    fontFamily: {
+                        title: ['"Lancelot"', "serif"],
+                        caption: ['"Sukar"', "sans-serif", "Arial"],
+                        body: ['"Be Vietnam Pro"', "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Sukar';
+            src: local('Sukar'), local('Arial');
+        }
+        body {
+            background-color: #132a4d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b1b33; }
+        ::-webkit-scrollbar-thumb { background: #1e3d6b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #335991; }
+        .form-panel {
+            background-color: rgba(30, 61, 107, 0.4);
+            border-left: 4px solid #d4af37;
+        }
+        /* Honeypot: hidden from humans, visible to naive bots */
+        .hp-field {
+            position: absolute !important;
+            left: -9999px !important;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        /* Native validation styling only after user interaction */
+        input:not(:placeholder-shown):invalid,
+        textarea:not(:placeholder-shown):invalid {
+            border-color: #f87171;
+        }
+    </style>
+</head>
+<body class="font-body text-white antialiased flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <header class="w-full sticky top-0 z-50">
+        <nav class="relative w-full px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center border-b border-white/10 bg-brand/90 backdrop-blur-sm">
+            <a href="../../" class="font-title text-3xl tracking-wider text-white hover:text-gray-300 transition-colors">Zarem</a>
+            <ul class="hidden md:flex space-x-10 text-sm font-caption tracking-widest uppercase">
+                <li><a href="../../" class="hover:text-gray-300 transition-colors">Inicio</a></li>
+                <li><a href="../../#marcas" class="hover:text-gray-300 transition-colors">Colegios y Marcas</a></li>
+                <li><a href="../manufactura/" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
+                <li><a href="./" class="text-white font-semibold">Contacto</a></li>
+            </ul>
+            <div class="flex items-center space-x-5">
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-brand-dark px-4 pt-3 pb-6 space-y-3">
+            <a href="../../" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Inicio</a>
+            <a href="../../#marcas" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Colegios y Marcas</a>
+            <a href="../manufactura/" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Manufactura</a>
+            <a href="./" class="block py-2 text-sm uppercase tracking-wider text-white font-semibold">Contacto</a>
+        </div>
+    </header>
 
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow bg-brand py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <!-- Title -->
+            <div class="mb-12 text-center">
+                <h1 class="font-title text-5xl md:text-6xl mb-2 text-white">Contacto</h1>
+                <p class="text-sm font-caption text-gray-400 uppercase tracking-widest">Estamos para atenderte</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+                <!-- FORM -->
+                <div class="lg:col-span-3">
+                    <div class="form-panel p-6 sm:p-8 rounded-lg">
+                        <h2 class="font-title text-2xl mb-2 text-brand-gold">Envíanos un mensaje</h2>
+                        <p class="text-xs text-gray-300 mb-6">Los campos marcados con <span class="text-brand-gold">*</span> son obligatorios. Te responderemos por WhatsApp.</p>
+
+                        <form id="contact-form" novalidate autocomplete="on">
+                            <!-- Honeypot (bots fill this, humans never see it) -->
+                            <div class="hp-field" aria-hidden="true">
+                                <label for="website">No llenar este campo</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <!-- Nombre -->
+                            <div class="mb-5">
+                                <label for="nombre" class="block text-xs font-caption uppercase tracking-wider text-gray-300 mb-2">
+                                    Nombre completo <span class="text-brand-gold">*</span>
+                                </label>
+                                <input type="text" id="nombre" name="nombre" required
+                                       maxlength="100" minlength="2" placeholder="Ej. María López"
+                                       autocomplete="name"
+                                       class="w-full bg-brand/80 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                            </div>
+
+                            <!-- WhatsApp -->
+                            <div class="mb-5">
+                                <label for="whatsapp" class="block text-xs font-caption uppercase tracking-wider text-gray-300 mb-2">
+                                    WhatsApp <span class="text-brand-gold">*</span>
+                                </label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required
+                                       maxlength="25" placeholder="Ej. +52 55 1234 5678"
+                                       inputmode="tel" autocomplete="tel"
+                                       pattern="[0-9+()\s-]{8,25}"
+                                       class="w-full bg-brand/80 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                                <p class="text-[11px] text-gray-400 mt-1.5">Incluye clave de país si estás fuera de México.</p>
+                            </div>
+
+                            <!-- Motivo -->
+                            <div class="mb-5">
+                                <label for="motivo" class="block text-xs font-caption uppercase tracking-wider text-gray-300 mb-2">
+                                    Motivo de contacto <span class="text-brand-gold">*</span>
+                                </label>
+                                <select id="motivo" name="motivo" required
+                                        class="w-full bg-brand/80 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all cursor-pointer">
+                                    <option value="" disabled selected>Selecciona una opción…</option>
+                                    <option value="Uniformes escolares">Uniformes escolares</option>
+                                    <option value="Uniformes corporativos">Uniformes corporativos</option>
+                                    <option value="Cotización por volumen">Cotización por volumen</option>
+                                    <option value="Estado de mi pedido">Estado de mi pedido</option>
+                                    <option value="Cambios y devoluciones">Cambios y devoluciones</option>
+                                    <option value="Alianza con mi colegio">Alianza con mi colegio</option>
+                                    <option value="Bolsa de trabajo">Bolsa de trabajo</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <!-- Colegio (conditional) -->
+                            <div class="mb-5" id="colegio-wrap">
+                                <label for="colegio" class="block text-xs font-caption uppercase tracking-wider text-gray-300 mb-2">
+                                    Colegio <span class="text-gray-500 normal-case tracking-normal">(si aplica)</span>
+                                </label>
+                                <select id="colegio" name="colegio"
+                                        class="w-full bg-brand/80 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all cursor-pointer">
+                                    <option value="" selected>No aplica</option>
+                                    <option value="STJ La Florida">Colegio Santa Teresa de Jesús - La Florida</option>
+                                    <option value="Instituto Zarem">Instituto Zarem</option>
+                                    <option value="Otro colegio">Otro colegio</option>
+                                </select>
+                            </div>
+
+                            <!-- Mensaje -->
+                            <div class="mb-5">
+                                <label for="mensaje" class="block text-xs font-caption uppercase tracking-wider text-gray-300 mb-2">
+                                    Mensaje <span class="text-brand-gold">*</span>
+                                </label>
+                                <textarea id="mensaje" name="mensaje" required rows="5"
+                                          maxlength="2000" minlength="10"
+                                          placeholder="Cuéntanos qué necesitas: prendas, tallas, cantidades, fechas…"
+                                          class="w-full bg-brand/80 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all resize-y"></textarea>
+                                <p class="text-[11px] text-gray-400 mt-1.5"><span id="char-count">0</span> / 2000 caracteres</p>
+                            </div>
+
+                            <!-- Privacy consent -->
+                            <div class="mb-6 flex items-start gap-3">
+                                <input type="checkbox" id="privacidad" name="privacidad" required
+                                       class="mt-1 w-4 h-4 rounded border-white/30 bg-brand/80 accent-[#d4af37] cursor-pointer">
+                                <label for="privacidad" class="text-xs text-gray-300 leading-relaxed cursor-pointer">
+                                    He leído y acepto el
+                                    <a href="../aviso-de-privacidad/" class="text-brand-gold hover:text-white underline">Aviso de Privacidad</a>
+                                    y autorizo el tratamiento de mis datos personales. <span class="text-brand-gold">*</span>
+                                </label>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" id="submit-btn"
+                                    class="w-full py-3.5 bg-white text-brand-dark font-caption uppercase tracking-wider text-xs font-bold rounded-xl hover:bg-gray-200 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                                Enviar mensaje
+                            </button>
+
+                            <!-- Status message (text only, never HTML) -->
+                            <p id="form-status" role="status" aria-live="polite"
+                               class="mt-4 text-sm text-center hidden"></p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- CONTACT DETAILS -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="form-panel p-6 rounded-lg">
+                        <h2 class="font-title text-2xl mb-4 text-brand-gold">Datos de contacto</h2>
+                        <ul class="space-y-4 font-body text-sm text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-3 text-brand-gold mt-0.5 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <span>Dakota 412 Local 2, Nápoles,<br>Benito Juárez, 03810<br>Ciudad de México, CDMX</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 mr-3 text-brand-gold min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <a href="mailto:info@zarem.mx" class="hover:text-white transition-colors">info@zarem.mx</a>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 mr-3 text-brand-gold min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <a href="tel:+525527415514" class="hover:text-white transition-colors">+52 1 55 2741 5514</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-panel p-6 rounded-lg">
+                        <h2 class="font-title text-2xl mb-4 text-brand-gold">Atención inmediata</h2>
+                        <p class="text-sm text-gray-300 mb-4">¿Prefieres escribirnos directo? Estamos en línea en horario de oficina.</p>
+                        <a href="https://wa.me/5215527415514" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center justify-center gap-2 w-full py-3 bg-white text-brand-dark font-caption uppercase tracking-wider text-xs font-bold rounded-xl hover:bg-gray-200 transition-colors">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                            </svg>
+                            Escríbenos por WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="form-panel p-6 rounded-lg">
+                        <h2 class="font-title text-2xl mb-3 text-brand-gold">Horario</h2>
+                        <ul class="text-sm text-gray-300 space-y-1.5">
+                            <li class="flex justify-between"><span>Lunes a Viernes</span><span class="text-white">9:00 – 18:00</span></li>
+                            <li class="flex justify-between"><span>Sábado</span><span class="text-white">10:00 – 14:00</span></li>
+                            <li class="flex justify-between"><span>Domingo</span><span class="text-gray-500">Cerrado</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="w-full bg-[#071324] pt-20 pb-10 px-4 sm:px-6 lg:px-8 relative z-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-16">
+            <!-- Brand Info & Social Media Icons -->
+            <div>
+                <h3 class="font-title text-3xl mb-6">Zarem Textiles</h3>
+                <p class="font-body text-gray-400 text-sm leading-relaxed mb-6">
+                    Diseños exclusivos con calidad garantizada. Casa de confección líder en uniformes y alta costura.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://m.me/1117400694800344" target="_blank" rel="noopener noreferrer" title="Facebook Messenger" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.512 3.733 7.182V22l3.41-1.874c.905.251 1.867.387 2.857.387 5.523 0 10-4.145 10-9.255C22 6.145 17.523 2 12 2zm1.06 12.332l-2.583-2.756-5.04 2.756 5.545-5.888 2.648 2.756 4.975-2.756-5.545 5.888z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/zarem_mx" target="_blank" rel="noopener noreferrer" title="Instagram" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/5215527415514" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.689-.833-1.95-.928-.261-.095-.451-.143-.642.143-.19.285-.736.928-.903 1.118-.166.19-.333.214-.618.071-.285-.143-1.206-.444-2.298-1.417-.85-.758-1.424-1.695-1.59-1.981-.167-.285-.018-.439.125-.581.129-.128.285-.333.428-.5.143-.167.19-.285.285-.476.095-.19.048-.357-.024-.5-.071-.143-.642-1.546-.88-2.118-.232-.557-.468-.482-.642-.491l-.547-.009c-.19 0-.5.071-.761.357-.261.285-1 .976-1 2.38 0 1.404 1.023 2.761 1.166 2.951.143.19 2.013 3.074 4.877 4.31.681.294 1.213.47 1.628.601.684.217 1.307.186 1.799.113.548-.081 1.689-.69 1.927-1.356.238-.666.238-1.237.167-1.356-.07-.119-.261-.214-.546-.357z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="flex flex-col md:items-center">
+                <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Enlaces Rápidos</h4>
+                <ul class="space-y-3 font-body text-sm text-gray-400">
+                    <li><a href="../../" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="../../#marcas" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
+                    <li><a href="../manufactura/" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
+                    <li><a href="./" class="hover:text-white transition-colors">Contáctanos</a></li>
+                    <li><a href="../aviso-de-privacidad/" class="hover:text-white transition-colors">Aviso de Privacidad</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Contacto</h4>
+                <ul class="space-y-4 font-body text-sm text-gray-400">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-3 text-white/50 mt-0.5 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Dakota 412, Nápoles, Benito Juárez,<br>03480 Ciudad de México, CDMX</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-white/50 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:info@zarem.mx" class="hover:text-white transition-colors">info@zarem.mx</a>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-white/50 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>+52 1 55 2741 5514</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8 font-body text-xs text-gray-500">
+            &copy; 2026 Zarem Textiles. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- FORM LOGIC -->
+    <script>
+        /* ==========================================================
+           PASO ÚNICO DE CONFIGURACIÓN
+           Pega aquí la URL del Web App de Google Apps Script.
+           Se ve así:
+           https://script.google.com/macros/s/AKfycbxxxxxxxxxxxxxxxx/exec
+           ========================================================== */
+        const ENDPOINT = 'PEGA_AQUI_LA_URL_DEL_APPS_SCRIPT';
+
+        const form       = document.getElementById('contact-form');
+        const statusEl   = document.getElementById('form-status');
+        const submitBtn  = document.getElementById('submit-btn');
+        const mensajeEl  = document.getElementById('mensaje');
+        const charCount  = document.getElementById('char-count');
+        const loadedAt   = Date.now();       // timing check against bots
+        let   sending    = false;
+
+        // Live character counter
+        mensajeEl.addEventListener('input', () => {
+            charCount.textContent = String(mensajeEl.value.length);
+        });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Status messages use textContent only — user input is never rendered as HTML.
+        function setStatus(text, kind) {
+            statusEl.textContent = text;
+            statusEl.classList.remove('hidden', 'text-emerald-400', 'text-red-400', 'text-gray-300');
+            statusEl.classList.add(
+                kind === 'ok'    ? 'text-emerald-400' :
+                kind === 'error' ? 'text-red-400' : 'text-gray-300'
+            );
+        }
+
+        // Strip control characters and clamp length before sending.
+        function clean(value, max) {
+            return String(value == null ? '' : value)
+                .replace(/[\u0000-\u001F\u007F]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim()
+                .slice(0, max);
+        }
+
+        function validate(payload) {
+            if (payload.nombre.length < 2)    return 'Escribe tu nombre completo.';
+            if (!/^[0-9+()\s-]{8,25}$/.test(payload.whatsapp)) return 'Escribe un número de WhatsApp válido.';
+            if (!/\d{8,}/.test(payload.whatsapp.replace(/\D/g, ''))) return 'El WhatsApp debe tener al menos 8 dígitos.';
+            if (!payload.motivo)              return 'Selecciona un motivo de contacto.';
+            if (payload.mensaje.length < 10)  return 'Cuéntanos un poco más en el mensaje.';
+            if (!document.getElementById('privacidad').checked) return 'Debes aceptar el Aviso de Privacidad.';
+            return null;
+        }
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            if (sending) return;
+
+            if (ENDPOINT === 'PEGA_AQUI_LA_URL_DEL_APPS_SCRIPT') {
+                setStatus('El formulario aún no está conectado. Escríbenos por WhatsApp mientras tanto.', 'error');
+                return;
+            }
+
+            // Bot traps: honeypot filled, or submitted impossibly fast.
+            if (document.getElementById('website').value !== '' || (Date.now() - loadedAt) < 3000) {
+                setStatus('No pudimos procesar el envío. Intenta de nuevo.', 'error');
+                return;
+            }
+
+            const payload = {
+                nombre:   clean(form.nombre.value, 100),
+                whatsapp: clean(form.whatsapp.value, 25),
+                motivo:   clean(form.motivo.value, 60),
+                colegio:  clean(form.colegio.value, 80),
+                mensaje:  clean(form.mensaje.value, 2000),
+                origen:   'zarem.mx/contacto'
+            };
+
+            const problem = validate(payload);
+            if (problem) { setStatus(problem, 'error'); return; }
+
+            sending = true;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando…';
+            setStatus('Enviando tu mensaje…', 'info');
+
+            try {
+                // text/plain avoids a CORS preflight that Apps Script cannot answer.
+                const response = await fetch(ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result && result.ok) {
+                    form.reset();
+                    charCount.textContent = '0';
+                    setStatus('¡Gracias! Recibimos tu mensaje y te contactaremos por WhatsApp.', 'ok');
+                } else {
+                    setStatus('No pudimos registrar tu mensaje. Escríbenos por WhatsApp, por favor.', 'error');
+                }
+            } catch (err) {
+                setStatus('Hubo un problema de conexión. Escríbenos por WhatsApp, por favor.', 'error');
+            } finally {
+                sending = false;
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar mensaje';
+            }
+        });
+    </script>
+</body>
+</html>
