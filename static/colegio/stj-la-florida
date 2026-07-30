@@ -82,13 +82,13 @@
     <header class="w-full sticky top-0 z-50">
         <nav class="relative w-full px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center border-b border-white/10 bg-brand/90 backdrop-blur-sm">
             <!-- Brand Logo -->
-            <a href="/" class="font-title text-3xl tracking-wider text-white hover:text-gray-300 transition-colors">Zarem</a>
+            <a href="../../../" class="font-title text-3xl tracking-wider text-white hover:text-gray-300 transition-colors">Zarem</a>
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-10 text-sm font-caption tracking-widest uppercase">
-                <li><a href="/" class="hover:text-gray-300 transition-colors">Inicio</a></li>
-                <li><a href="/#marcas" class="hover:text-gray-300 transition-colors">Colegios y Marcas</a></li>
-                <li><a href="/static/manufactura" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
-                <li><a href="/static/contacto" class="hover:text-gray-300 transition-colors">Contacto</a></li>
+                <li><a href="../../../" class="hover:text-gray-300 transition-colors">Inicio</a></li>
+                <li><a href="../../../#marcas" class="hover:text-gray-300 transition-colors">Colegios y Marcas</a></li>
+                <li><a href="../../manufactura/" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
+                <li><a href="../../contacto/" class="hover:text-gray-300 transition-colors">Contacto</a></li>
             </ul>
             <!-- Right Actions: Cart & Mobile Menu -->
             <div class="flex items-center space-x-5">
@@ -107,10 +107,10 @@
         </nav>
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-brand-dark px-4 pt-3 pb-6 space-y-3">
-            <a href="/" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Inicio</a>
-            <a href="/#marcas" class="block py-2 text-sm uppercase tracking-wider text-white font-semibold">Colegios y Marcas</a>
-            <a href="/static/manufactura" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Manufactura</a>
-            <a href="/static/contacto" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Contacto</a>
+            <a href="../../../" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Inicio</a>
+            <a href="../../../#marcas" class="block py-2 text-sm uppercase tracking-wider text-white font-semibold">Colegios y Marcas</a>
+            <a href="../../manufactura/" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Manufactura</a>
+            <a href="../../contacto/" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Contacto</a>
         </div>
     </header>
     <!-- HERO / PORTADA STJ LA FLORIDA -->
@@ -118,9 +118,9 @@
         <div class="content-over-pattern max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
             <!-- Breadcrumbs -->
             <nav class="flex items-center text-xs font-caption text-gray-400 mb-8 space-x-2 uppercase tracking-wider">
-                <a href="/index.html" class="hover:text-white transition-colors">Inicio</a>
+                <a href="../../../" class="hover:text-white transition-colors">Inicio</a>
                 <span>/</span>
-                <a href="/index.html#marcas" class="hover:text-white transition-colors">Colegios</a>
+                <a href="../../../#marcas" class="hover:text-white transition-colors">Colegios</a>
                 <span>/</span>
                 <span class="text-white font-medium">STJ La Florida</span>
             </nav>
@@ -276,7 +276,7 @@
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-01</span>
                             <!-- Producto Image -->
-                            <img src="/src/catalogo/chamarra-deportes-hd.png" alt="Chamarra Deportes" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/chamarra-deportes-hd.png" alt="Chamarra Deportes" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -301,7 +301,7 @@
                             <button onclick="addToCart('clf-01', 'Chamarra Deportes', 650)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors" title="Agregar al Carrito">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-01" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-01/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -315,7 +315,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-02</span>
-                            <img src="/src/catalogo/pants-deportes-hd.png" alt="Pants Suelto" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/pants-deportes-hd.png" alt="Pants Suelto" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -339,7 +339,7 @@
                             <button onclick="addToCart('clf-02', 'Pants Suelto', 580)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-02" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-02/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -353,7 +353,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-03</span>
-                            <img src="/src/catalogo/polo-mujer-diario-hd.png" alt="Polo Deportes Niña" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-mujer-diario-hd.png" alt="Polo Deportes Niña" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -377,7 +377,7 @@
                             <button onclick="addToCart('clf-03', 'Polo Deportes Niña', 340)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-03" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-03/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -391,7 +391,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-04</span>
-                            <img src="/src/catalogo/polo-hombre-diario-hd.png" alt="Polo Deportes Niño" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-hombre-diario-hd.png" alt="Polo Deportes Niño" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -415,7 +415,7 @@
                             <button onclick="addToCart('clf-04', 'Polo Deportes Niño', 340)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-04" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-04/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -429,7 +429,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-05</span>
-                            <img src="/src/catalogo/pants-deportes-hd.jpg" alt="Short Deportivo" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/pants-deportes-hd.jpg" alt="Short Deportivo" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -452,7 +452,7 @@
                             <button onclick="addToCart('clf-05', 'Short Deportivo', 300)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-05" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-05/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -466,7 +466,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-06</span>
-                            <img src="/src/catalogo/sudadera-mujer-hd.png" alt="Sudadera Florida" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/sudadera-mujer-hd.png" alt="Sudadera Florida" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -490,7 +490,7 @@
                             <button onclick="addToCart('clf-06', 'Sudadera Florida', 630)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-06" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-06/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -504,7 +504,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-07</span>
-                            <img src="/src/catalogo/polo-mujer-diario-hd.png" alt="Jumper Escolar" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-mujer-diario-hd.png" alt="Jumper Escolar" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -528,7 +528,7 @@
                             <button onclick="addToCart('clf-07', 'Jumper Escolar', 630)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-07" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-07/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -542,7 +542,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-08</span>
-                            <img src="/src/catalogo/polo-diario-hd.png" alt="Polo Diario Niña" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-diario-hd.png" alt="Polo Diario Niña" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -566,7 +566,7 @@
                             <button onclick="addToCart('clf-08', 'Polo Diario Niña', 330)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-08" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-08/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -580,7 +580,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-09</span>
-                            <img src="/src/catalogo/polo-diario-hd.png" alt="Suéter Abierto" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-diario-hd.png" alt="Suéter Abierto" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -604,7 +604,7 @@
                             <button onclick="addToCart('clf-09', 'Suéter Abierto', 510)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-09" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-09/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -618,7 +618,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-10</span>
-                            <img src="/src/catalogo/pantalon-hombre-diario-hd.png" alt="Pantalón Diario Niño" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/pantalon-hombre-diario-hd.png" alt="Pantalón Diario Niño" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -642,7 +642,7 @@
                             <button onclick="addToCart('clf-10', 'Pantalón Diario Niño', 460)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-10" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-10/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -682,7 +682,7 @@
                             <button onclick="addToCart('clf-11', 'Cinturón Institucional', 180)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-11" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-11/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -722,7 +722,7 @@
                             <button onclick="addToCart('clf-12', 'Bata Kinder', 360)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-12" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-12/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -762,7 +762,7 @@
                             <button onclick="addToCart('clf-13', 'Calcetas Escolares', 70)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-13" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-13/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -776,7 +776,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-14</span>
-                            <img src="/src/catalogo/pantalon-hombre-diario-hd.png" alt="Pantalón Secundaria" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/pantalon-hombre-diario-hd.png" alt="Pantalón Secundaria" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -800,7 +800,7 @@
                             <button onclick="addToCart('clf-14', 'Pantalón Secundaria', 460)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-14" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-14/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -814,7 +814,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-15</span>
-                            <img src="/src/catalogo/polo-hombre-diario-hd.png" alt="Playera Polo Diario Niño" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-hombre-diario-hd.png" alt="Playera Polo Diario Niño" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -838,7 +838,7 @@
                             <button onclick="addToCart('clf-15', 'Playera Polo Diario Niño', 330)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-15" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-15/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -852,7 +852,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-16</span>
-                            <img src="/src/catalogo/polo-diario-hd.png" alt="Suéter Cerrado STJ" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-diario-hd.png" alt="Suéter Cerrado STJ" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -876,7 +876,7 @@
                             <button onclick="addToCart('clf-16', 'Suéter Cerrado STJ', 500)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-16" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-16/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -916,7 +916,7 @@
                             <button onclick="addToCart('clf-17', 'Chaleco Tejido', 420)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-17" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-17/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -956,7 +956,7 @@
                             <button onclick="addToCart('clf-18', 'Calcetines Deportivos', 70)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-18" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-18/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -997,7 +997,7 @@
                             <button onclick="addToCart('clf-19', 'T-Shirt Amigos de Jesús Kinder', 380)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-19" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-19/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -1011,7 +1011,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-20</span>
-                            <img src="/src/catalogo/polo-diario-hd.png" alt="Polo Amigos de Jesús Primaria" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/polo-diario-hd.png" alt="Polo Amigos de Jesús Primaria" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -1035,7 +1035,7 @@
                             <button onclick="addToCart('clf-20', 'Polo Amigos de Jesús Primaria', 370)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-20" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-20/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -1049,7 +1049,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-21</span>
-                            <img src="/src/catalogo/chamarra-deportes-hd.png" alt="Chamarra Amigos de Jesús" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/chamarra-deportes-hd.png" alt="Chamarra Amigos de Jesús" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -1073,7 +1073,7 @@
                             <button onclick="addToCart('clf-21', 'Chamarra Amigos de Jesús', 480)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-21" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-21/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -1087,7 +1087,7 @@
                     <div>
                         <div class="relative aspect-square bg-gradient-to-br from-white/10 to-white/5 p-6 flex items-center justify-center overflow-hidden">
                             <span class="absolute top-3 left-3 bg-brand/80 backdrop-blur-sm border border-white/15 text-[10px] font-caption text-gray-300 uppercase px-2.5 py-1 rounded-md">REF: CLF-22</span>
-                            <img src="/src/catalogo/chamarra-deportes-hd.png" alt="Chamarra Invierno Impermeable" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="../../../src/catalogo/chamarra-deportes-hd.png" alt="Chamarra Invierno Impermeable" class="w-32 h-32 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-1.5 mb-2">
@@ -1111,7 +1111,7 @@
                             <button onclick="addToCart('clf-22', 'Chamarra Invierno Impermeable', 550)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-22" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-22/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -1150,7 +1150,7 @@
                             <button onclick="addToCart('clf-23', 'Chaleco Térmico Invierno', 350)" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                             </button>
-                            <a href="static/colegio/stj-la-florida/producto-clf-23" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
+                            <a href="producto-clf-23/" class="px-3.5 py-2.5 rounded-xl bg-white text-brand-dark hover:bg-gray-200 text-xs font-caption uppercase tracking-wider font-semibold transition-colors">
                                 Ver Detalles
                             </a>
                         </div>
@@ -1244,11 +1244,11 @@
             <div class="flex flex-col md:items-center">
                 <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Enlaces Rápidos</h4>
                 <ul class="space-y-3 font-body text-sm text-gray-400">
-                    <li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
-                    <li><a href="/#marcas" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
-                    <li><a href="/static/manufactura" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
-                    <li><a href="/static/contacto" class="hover:text-white transition-colors">Contáctanos</a></li>
-                    <li><a href="/static/aviso-de-privacidad" class="hover:text-white transition-colors">Aviso de Privacidad</a></li>
+                    <li><a href="../../../" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="../../../#marcas" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
+                    <li><a href="../../manufactura/" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
+                    <li><a href="../../contacto/" class="hover:text-white transition-colors">Contáctanos</a></li>
+                    <li><a href="../../aviso-de-privacidad/" class="hover:text-white transition-colors">Aviso de Privacidad</a></li>
                 </ul>
             </div>
             <!-- Contact Info -->
