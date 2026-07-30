@@ -1,1 +1,363 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad | Zarem Textiles</title>
+    <!-- Google Fonts: Lancelot & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lancelot&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: "#132a4d",
+                            dark: "#0b1b33",
+                            light: "#1e3d6b",
+                            accent: "#d4af37",
+                            gold: "#f3e5ab"
+                        },
+                    },
+                    fontFamily: {
+                        title: ['"Lancelot"', "serif"],
+                        caption: ['"Sukar"', "sans-serif", "Arial"],
+                        body: ['"Be Vietnam Pro"', "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Sukar';
+            src: local('Sukar'), local('Arial');
+        }
+        body {
+            background-color: #132a4d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b1b33; }
+        ::-webkit-scrollbar-thumb { background: #1e3d6b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #335991; }
+        .privacy-section {
+            background-color: rgba(30, 61, 107, 0.4);
+            border-left: 4px solid #d4af37;
+        }
+    </style>
+</head>
+<body class="font-body text-white antialiased flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <header class="w-full sticky top-0 z-50">
+        <nav class="relative w-full px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center border-b border-white/10 bg-brand/90 backdrop-blur-sm">
+            <!-- Brand Logo -->
+            <a href="/" class="font-title text-3xl tracking-wider text-white hover:text-gray-300 transition-colors">Zarem</a>
 
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-10 text-sm font-caption tracking-widest uppercase">
+                <li><a href="/" class="hover:text-gray-300 transition-colors">Inicio</a></li>
+                <li><a href="/#marcas" class="hover:text-gray-300 transition-colors">Colegios y Marcas</a></li>
+                <li><a href="/static/manufactura" class="hover:text-gray-300 transition-colors">Manufactura</a></li>
+                <li><a href="/static/contacto" class="hover:text-gray-300 transition-colors">Contacto</a></li>
+            </ul>
+
+            <!-- Right Actions: Mobile Menu -->
+            <div class="flex items-center space-x-5">
+                <!-- Mobile menu toggle -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-brand-dark px-4 pt-3 pb-6 space-y-3">
+            <a href="/" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Inicio</a>
+            <a href="/#marcas" class="block py-2 text-sm uppercase tracking-wider text-white font-semibold">Colegios y Marcas</a>
+            <a href="/static/manufactura" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Manufactura</a>
+            <a href="/static/contacto" class="block py-2 text-sm uppercase tracking-wider text-gray-200">Contacto</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow bg-brand py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Title -->
+            <div class="mb-12 text-center">
+                <h1 class="font-title text-5xl md:text-6xl mb-2 text-white">Aviso de Privacidad</h1>
+                <p class="text-sm font-caption text-gray-400 uppercase tracking-widest">Para clientes, trabajadores y público en general</p>
+            </div>
+
+            <!-- Content -->
+            <div class="space-y-8 text-gray-200">
+                <!-- Intro -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <p class="text-sm leading-relaxed">
+                        En términos de lo previsto en los artículos 15, 16 y demás aplicables de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en lo sucesivo denominada como la "ley"), César Cobos Meraz (en lo sucesivo denominado como el "Responsable") es el responsable de recabar sus datos personales, del tratamiento que se le dé a los mismos y de su protección, por lo que expide el presente Aviso de Privacidad, de conformidad con los siguientes:
+                    </p>
+                </div>
+
+                <!-- Section 1 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">1. Propósito del Aviso</h2>
+                    <p class="text-sm leading-relaxed">
+                        El presente Aviso de Privacidad tiene por objeto regular la obtención, tratamiento y protección de los datos personales de los clientes del Responsable (padres, madres o tutores y sus hijos o pupilos que se encuentren inscritos en alguna institución educativa respecto de la cual el Responsable fabrique uniformes, ya sea en forma exclusiva o no) y de quienes tienen con él alguna relación laboral, mediante su tratamiento legítimo, controlado e informado, a efecto de garantizar su privacidad, así como el derecho a la autodeterminación informativa.
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">2. Definiciones</h2>
+                    <p class="text-sm leading-relaxed">
+                        Se entiende por "dato personal" cualquier información concerniente a una persona física identificada o identificable. La persona encargada del tratamiento de los datos personales de cada titular es el propio Responsable.
+                    </p>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">3. Domicilio del Responsable</h2>
+                    <p class="text-sm leading-relaxed">
+                        El domicilio del "Responsable" es el ubicado en calle Dakota 412 Local 2, colonia Nápoles, C.P. 03810, alcaldía Benito Juárez, Ciudad de México.
+                    </p>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">4. Finalidades Primarias</h2>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Al proporcionar sus datos personales o los de los menores de edad bajo su patria potestad, guarda, custodia o tutela, por escrito a través de una solicitud, formato en papel, formato digital, correo electrónico, o cualquier otro documento impreso o electrónico a través de los cuales se lleve a cabo la compraventa de uniformes u otros productos que comercializa el Responsable o en los contratos de trabajo y otros documentos de índole laboral, el titular acepta y autoriza al Responsable para utilizar y tratar de forma automatizada dichos datos personales e información suministrados.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-semibold text-brand-gold">Los datos se utilizarán para:</p>
+                        <ul class="text-sm space-y-2 pl-4">
+                            <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span>Identificar, ubicar, comunicar y contactar al titular a fin de dar cumplimiento a las obligaciones derivadas del contrato de trabajo o compraventa de productos.</span></li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span>Proveer los productos o servicios solicitados y comunicar sobre cambios en los mismos.</span></li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span>Llevar a cabo la inscripción como trabajador ante el Instituto Mexicano del Seguro Social y autoridades competentes.</span></li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span>Cumplir requerimientos realizados por autoridades laborales, fiscales, de seguridad social o cualquier autoridad competente.</span></li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span>Registrar, evaluar y, en su caso, contratar a personas en procesos de selección de personal.</span></li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span>Mantener la seguridad, orden y disciplina en establecimientos del Responsable mediante cámaras de videovigilancia.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">5. Finalidades Secundarias</h2>
+                    <p class="text-sm leading-relaxed mb-4">
+                        El Responsable tratará los datos personales del titular para las siguientes finalidades secundarias, mismas que no son necesarias para dar continuidad a su relación jurídica, laboral o comercial:
+                    </p>
+                    <ul class="text-sm space-y-2 pl-4">
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">■</span><span>Notificar sobre nuevos servicios o productos relacionados con los ya contratados o adquiridos.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">■</span><span>Elaborar estudios y programas para determinar hábitos de consumo y mejorar la calidad de servicios.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">■</span><span>Enviar información relacionada con actividades sociales y culturales que organice el Responsable.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">■</span><span>Transferir datos personales a instituciones públicas y/o privadas para fines estadísticos y de control de calidad.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">■</span><span>Emitir Comprobantes Fiscales Digitales por Internet (CFDI).</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">■</span><span>Emitir publicidad con la imagen, voz o nombre del titular.</span></li>
+                    </ul>
+                    <p class="text-sm leading-relaxed mt-4">
+                        El titular podrá manifestar su negativa para las finalidades secundarias mediante correo electrónico a <a href="mailto:info@zarem.mx" class="text-brand-gold hover:text-white">info@zarem.mx</a>
+                    </p>
+                </div>
+
+                <!-- Section 6 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">6. Transferencia de Datos</h2>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Los datos personales son compartidos dentro y fuera del país con las siguientes personas, empresas, organizaciones y autoridades:
+                    </p>
+                    <div class="text-sm space-y-3">
+                        <div><span class="text-brand-gold font-semibold">Secretaría del Trabajo y Previsión Social</span> - Para cumplimiento de obligaciones patronales en materia de trabajo, seguridad social y obligaciones fiscales.</div>
+                        <div><span class="text-brand-gold font-semibold">Instituto Mexicano del Seguro Social</span> - Para trámites de seguridad social.</div>
+                        <div><span class="text-brand-gold font-semibold">Instituto del Fondo Nacional de la Vivienda para los Trabajadores</span> - Para gestión de vivienda.</div>
+                        <div><span class="text-brand-gold font-semibold">Servicio de Administración Tributaria</span> - Para cumplimiento de obligaciones fiscales.</div>
+                    </div>
+                </div>
+
+                <!-- Section 7 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">7. Datos Personales Requeridos</h2>
+                    <p class="text-sm leading-relaxed mb-4 font-semibold text-brand-gold">Si la relación deriva de compraventa de productos o servicios:</p>
+                    <ul class="text-sm space-y-2 pl-4 mb-4">
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos de identificación:</span> Nombre, RFC, CURP.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos de contacto:</span> Domicilio, correo electrónico, teléfono.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos sobre características físicas:</span> Estatura, peso, medidas corporales.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos académicos:</span> Institución educativa, nivel educativo, grado escolar.</span></li>
+                    </ul>
+                    <p class="text-sm leading-relaxed mb-4 font-semibold text-brand-gold">Si la relación deriva de un contrato de trabajo:</p>
+                    <ul class="text-sm space-y-2 pl-4">
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos de identificación:</span> Nombre, firma, RFC, CURP, lugar y fecha de nacimiento, nacionalidad, fotografía, edad.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos de contacto:</span> Domicilio particular y de trabajo, correo electrónico, teléfonos.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos sobre características físicas:</span> Información biométrica y antropométrica.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos patrimoniales o financieros:</span> Bienes, información fiscal, historial crediticio.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Section 8 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">8. Datos Personales Sensibles</h2>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Únicamente cuando la relación deriva de un contrato de trabajo, se utilizarán los siguientes datos personales considerados como sensibles:
+                    </p>
+                    <ul class="text-sm space-y-2 pl-4">
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos de salud:</span> Información sobre estado de salud, enfermedades, alergias, tratamientos médicos, resultados de pruebas toxicológicas y psicométricas.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos ideológicos:</span> Posturas religiosas, filosóficas o morales.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">Datos de origen étnico o racial:</span> Información sobre pertenencia a pueblos, etnias o regiones.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Section 9 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">9. Necesidad de Datos</h2>
+                    <p class="text-sm leading-relaxed">
+                        Los datos personales generales como los datos personales sensibles sólo serán recabados cuando sean estrictamente indispensables para los fines de la relación jurídica de que se trate, ya sea comercial o laboral.
+                    </p>
+                </div>
+
+                <!-- Section 10 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">10. Temporalidad</h2>
+                    <p class="text-sm leading-relaxed">
+                        La temporalidad del manejo de los datos personales será indefinida a partir de la fecha en que sean proporcionados al Responsable, pudiendo oponerse al manejo de los mismos en cualquier momento que lo considere oportuno, con las limitaciones de Ley. Quedan fuera de este supuesto las bases de datos referentes a las calificaciones y demás información académica.
+                    </p>
+                </div>
+
+                <!-- Section 11 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">11. Medidas de Seguridad</h2>
+                    <p class="text-sm leading-relaxed">
+                        El Responsable está obligado a cumplir con los principios de licitud, consentimiento, información, calidad, finalidad, lealtad, proporcionalidad y responsabilidad. Se obliga a guardar estricta confidencialidad de los datos personales, así como a mantener las medidas de seguridad administrativas, técnicas y físicas que permitan protegerlos contra cualquier daño, pérdida, alteración, acceso o tratamiento no autorizado.
+                    </p>
+                </div>
+
+                <!-- Section 12 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">12. Derechos del Titular (ARCO)</h2>
+                    <p class="text-sm leading-relaxed mb-4">
+                        El titular de los datos personales tiene los siguientes derechos:
+                    </p>
+                    <ul class="text-sm space-y-2 pl-4 mb-4">
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">ACCESO:</span> Derecho a conocer qué datos personales se tienen de su titular, para qué se utilizan y las condiciones del uso.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">RECTIFICACIÓN:</span> Derecho a solicitar la corrección de información desactualizada, inexacta o incompleta.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">CANCELACIÓN:</span> Derecho a que sus datos sean eliminados de los registros del Responsable.</span></li>
+                        <li class="flex items-start"><span class="text-brand-gold mr-3">•</span><span><span class="font-semibold">OPOSICIÓN:</span> Derecho a desaprobar el uso de sus datos para fines específicos.</span></li>
+                    </ul>
+                    <p class="text-sm leading-relaxed">
+                        El titular puede ejercer sus derechos ARCO mediante solicitud por escrito dirigida al Responsable en su domicilio, vía telefónica <a href="tel:+525527415514" class="text-brand-gold hover:text-white">+52 1 55 2741 5514</a> o vía correo electrónico a <a href="mailto:info@zarem.mx" class="text-brand-gold hover:text-white">info@zarem.mx</a>. La respuesta se proporcionará dentro de un plazo de 20 días hábiles.
+                    </p>
+                </div>
+
+                <!-- Section 13 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">13. Uso de Cookies</h2>
+                    <p class="text-sm leading-relaxed">
+                        El usuario reconoce y acepta que el Responsable podrá utilizar un sistema de seguimiento mediante Cookies para personalizar los servicios. Las Cookies se utilizan para conocer intereses, comportamiento y demografía de visitantes, comprender mejor sus necesidades e intereses y proporcionar mejor servicio. El usuario puede eliminar las Cookies de su computador cuando lo desee.
+                    </p>
+                </div>
+
+                <!-- Section 14 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">14. Aceptación del Aviso</h2>
+                    <p class="text-sm leading-relaxed">
+                        Al aportar sus datos personales al Responsable, suscribir cualquier contrato, cubrir cuotas de inscripción, participar en procesos de selección de personal o firmar contrato de trabajo, el titular acepta el contenido del presente Aviso de Privacidad con las limitaciones que de manera expresa manifieste.
+                    </p>
+                </div>
+
+                <!-- Section 15 -->
+                <div class="privacy-section p-6 rounded-lg">
+                    <h2 class="font-title text-2xl mb-4 text-brand-gold">15. Modificaciones del Aviso</h2>
+                    <p class="text-sm leading-relaxed mb-4">
+                        El Responsable podrá modificar o corregir este Aviso de Privacidad sin restricción alguna, mismo que puede ser revisado y consultado en cualquier momento en la página electrónica www.zarem.mx
+                    </p>
+                    <div class="text-sm text-brand-gold font-semibold border-t border-white/20 pt-4 mt-4">
+                        Fecha de última actualización: 05 de diciembre de 2026<br>
+                        Folio: 1000013191
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer id="contacto" class="w-full bg-[#071324] pt-20 pb-10 px-4 sm:px-6 lg:px-8 relative z-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-16">
+
+            <!-- Brand Info & Social Media Icons -->
+            <div>
+                <h3 class="font-title text-3xl mb-6">Zarem Textiles</h3>
+                <p class="font-body text-gray-400 text-sm leading-relaxed mb-6">
+                    Diseños exclusivos con calidad garantizada. Casa de confección líder en uniformes y alta costura.
+                </p>
+                <div class="flex space-x-4">
+                    <!-- Facebook Messenger Link -->
+                    <a href="https://m.me/1117400694800344" target="_blank" rel="noopener noreferrer" title="Facebook Messenger" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.512 3.733 7.182V22l3.41-1.874c.905.251 1.867.387 2.857.387 5.523 0 10-4.145 10-9.255C22 6.145 17.523 2 12 2zm1.06 12.332l-2.583-2.756-5.04 2.756 5.545-5.888 2.648 2.756 4.975-2.756-5.545 5.888z"/>
+                        </svg>
+                    </a>
+                    <!-- Instagram Link -->
+                    <a href="https://www.instagram.com/zarem_mx" target="_blank" rel="noopener noreferrer" title="Instagram" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <!-- WhatsApp Link -->
+                    <a href="https://wa.me/5215527415514" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand transition-all">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.285-.143-1.689-.833-1.95-.928-.261-.095-.451-.143-.642.143-.19.285-.736.928-.903 1.118-.166.19-.333.214-.618.071-.285-.143-1.206-.444-2.298-1.417-.85-.758-1.424-1.695-1.59-1.981-.167-.285-.018-.439.125-.581.129-.128.285-.333.428-.5.143-.167.19-.285.285-.476.095-.19.048-.357-.024-.5-.071-.143-.642-1.546-.88-2.118-.232-.557-.468-.482-.642-.491l-.547-.009c-.19 0-.5.071-.761.357-.261.285-1 .976-1 2.38 0 1.404 1.023 2.761 1.166 2.951.143.19 2.013 3.074 4.877 4.31.681.294 1.213.47 1.628.601.684.217 1.307.186 1.799.113.548-.081 1.689-.69 1.927-1.356.238-.666.238-1.237.167-1.356-.07-.119-.261-.214-.546-.357z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-col md:items-center">
+                <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Enlaces Rápidos</h4>
+                <ul class="space-y-3 font-body text-sm text-gray-400">
+                    <li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="/#marcas" class="hover:text-white transition-colors">Colegios y Marcas</a></li>
+                    <li><a href="/static/manufactura" class="hover:text-white transition-colors">Proceso de Manufactura</a></li>
+                    <li><a href="/static/contacto" class="hover:text-white transition-colors">Contáctanos</a></li>
+                    <li><a href="/static/aviso-de-privacidad" class="hover:text-white transition-colors">Aviso de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="font-caption uppercase tracking-[0.15em] text-sm mb-6 text-white">Contacto</h4>
+                <ul class="space-y-4 font-body text-sm text-gray-400">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-3 text-white/50 mt-0.5 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Dakota 412, Nápoles, Benito Juárez,<br>03480 Ciudad de México, CDMX</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-white/50 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:info@zarem.mx" class="hover:text-white transition-colors">info@zarem.mx</a>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-white/50 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>+52 1 55 2741 5514</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-8 font-body text-xs text-gray-500">
+            &copy; 2026 Zarem Textiles. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
